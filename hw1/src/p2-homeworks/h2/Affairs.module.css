@@ -1,3 +1,18 @@
-.someClass {
+.columnsClass {
+    display: grid;
+    grid-template-columns: 130px 60px 1fr;
+    padding: 3px;
+    margin-left: 5px;
 
 }
+.columnsClass button{
+    width:50px;
+}
+.filter{
+    padding: 10px;
+}
+.filter button {
+    margin-left: 10px;
+}
+
+

@@ -1,7 +1,7 @@
 import React from 'react'
 import './Message.module.css'
 import {inspect} from "util";
-import styles from './Message.module.css'
+import s from './Message.module.css'
 type MassageType ={
     avatar:string
     name:string
@@ -12,11 +12,11 @@ type MassageType ={
 function Message(props:MassageType) {
     return (
         <div>
-            <img className={styles.img} src={props.avatar}/>
-            <div  className={styles.message}>
-                <div className={styles.name}>{props.name}</div>
-                <div className={styles.text} >{props.message}</div>
-                <div className={styles.time}>{props.time}</div>
+            <img className={s.img} src={props.avatar}/>
+            <div  className={s.message}>
+                <div className={s.name}>{props.name}</div>
+                <div className={s.text} >{props.message}</div>
+                <div className={s.time}>{props.time}</div>
             </div>
         </div>
     )
