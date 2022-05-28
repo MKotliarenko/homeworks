@@ -2,6 +2,71 @@
 
 }
 
-.red {
-    background: red;
+.red{
+    color: red;
+    transition: all 0.5s;
+    position: relative;
 }
+.red::after{
+    border: 1px solid rgb(255, 0, 0);
+}
+
+
+.btn {
+    /*line-height: 50px;*/
+    /*height: 50px;*/
+    /*text-align: center;*/
+    /*width: 250px;*/
+    cursor: pointer;
+    background:#66A182;
+}
+.btnThree{
+    color: #FFF;
+    transition: all 0.5s;
+    position: relative;
+}
+.btnThree::before, .red::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    background-color: rgba(255,255,255,0.1);
+    transition: all 0.3s;
+}
+.btnThree:hover::before, .red:hover::before {
+    opacity: 0 ;
+    transform: scale(0.5,0.5);
+}
+.btnThree::after, .red::after {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+    transition: all 0.3s;
+    transform: scale(1.2,1.2);
+}
+.btnThree::after{
+    border: 1px solid rgb(255, 255, 255);
+
+}
+.btnThree:hover::after, .red:hover::after {
+    opacity: 1;
+    transform: scale(1,1);
+}
+
+.btn:disabled {
+    color: #3b624c;
+    cursor: auto;
+}
+.btnThree:disabled{
+    z-index:-1;
+}
+
+

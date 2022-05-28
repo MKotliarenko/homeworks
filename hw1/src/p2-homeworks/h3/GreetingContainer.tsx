@@ -11,12 +11,13 @@ const GreetingContainer: React.FC<GreetingContainerPropsType> = ({users, addUser
     const [error, setError] = useState<string>('')
 
     const setNameCallback = (e: ChangeEvent<HTMLInputElement>) => {
-        if (e.currentTarget.value.trim() === '') {
+        const trimName = e.currentTarget.value.trim()
+        if (trimName) {
+            setName(trimName)
+            setError('')
+        } else {
             setError("The entered value is incorrect")
             setName('')
-        } else {
-            setName(e.currentTarget.value)
-            setError('')
         }
     }
     const addUser = () => {
