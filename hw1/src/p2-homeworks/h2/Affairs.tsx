@@ -7,7 +7,8 @@ import SuperButton from "../h4/common/c2-SuperButton/SuperButton";
 type AffairsPropsType = {
     data: Array<AffairType>,
     setFilter: (filter:FilterType) => void,
-    deleteAffairCallback: (_id: number) => void
+    deleteAffairCallback: (_id: number) => void,
+    filter:FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
@@ -19,32 +20,25 @@ function Affairs(props: AffairsPropsType) {
         />
     ))
 
-    const setAll = () => {props.setFilter('all')}
-    const setHigh = () => {props.setFilter('high')}
-    const setMiddle = () => {props.setFilter('middle')}
-    const setLow = () => {props.setFilter('low')}
+    const setFilter = (filter:FilterType) => {props.setFilter(filter)}
 
     return (
         <div >
 
             {mappedAffairs}
             <div className={s.filter}>
-                <SuperButton onClick={setAll}>
+                <SuperButton onClick={()=>setFilter("all")}  >
                     All
                 </SuperButton>
-                <SuperButton onClick={setHigh}>
+                <SuperButton onClick={()=>setFilter("high")}>
                     High
                 </SuperButton>
-                <SuperButton onClick={setMiddle}>
+                <SuperButton onClick={()=>setFilter("middle")}>
                     Middle
                 </SuperButton>
-                <SuperButton onClick={setLow} style={{width:50, height:30}}>
+                <SuperButton onClick={()=>setFilter("low")}>
                     Low
                 </SuperButton>
-                {/*<button onClick={setAll}>All</button>*/}
-                {/*<button onClick={setHigh}>High</button>*/}
-                {/*<button onClick={setMiddle}>Middle</button>*/}
-                {/*<button onClick={setLow}>Low</button>*/}
             </div>
         </div>
     )

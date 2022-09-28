@@ -6,6 +6,8 @@
     color: red;
     transition: all 0.5s;
     position: relative;
+    min-width:60px;
+    height:30px;
 }
 .red::after{
     border: 1px solid rgb(255, 0, 0);
@@ -19,11 +21,14 @@
     /*width: 250px;*/
     cursor: pointer;
     background:#66A182;
+
 }
 .btnThree{
     color: #FFF;
     transition: all 0.5s;
     position: relative;
+    min-width:60px;
+    height:30px;
 }
 .btnThree::before, .red::before {
     content: '';
@@ -64,9 +69,11 @@
 .btn:disabled {
     color: #3b624c;
     cursor: auto;
+
 }
 .btnThree:disabled{
     z-index:-1;
+
 }
 
 
