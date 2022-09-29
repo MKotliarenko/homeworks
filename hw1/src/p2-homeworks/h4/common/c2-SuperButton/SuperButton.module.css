@@ -21,7 +21,6 @@
     /*width: 250px;*/
     cursor: pointer;
     background:#66A182;
-
 }
 .btnThree{
     color: #FFF;
@@ -29,6 +28,7 @@
     position: relative;
     min-width:60px;
     height:30px;
+    padding-left: 10px;
 }
 .btnThree::before, .red::before {
     content: '';
@@ -59,7 +59,6 @@
 }
 .btnThree::after{
     border: 1px solid rgb(255, 255, 255);
-
 }
 .btnThree:hover::after, .red:hover::after {
     opacity: 1;
@@ -69,11 +68,9 @@
 .btn:disabled {
     color: #3b624c;
     cursor: auto;
-
 }
 .btnThree:disabled{
     z-index:-1;
-
 }
 
 
